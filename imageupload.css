@@ -1,0 +1,168 @@
+/* General Styles for Image Upload */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #39297b;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px auto 50px;
+    font-weight: 600;
+}
+.upload-form {
+    display: block; /* Make sure upload form is visible */
+}
+
+.search-form {
+    display: none; /* Hide search form */
+}
+
+/* General Styles for Image Upload */
+.upload-form {
+    display: block; /* Make sure upload form is visible */
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    height: 80px;
+    background: #434989;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin-top: 20px; /* Add top margin to separate forms */
+}
+
+.upload-form input[type="file"] {
+    flex: 1;
+    height: 100%;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #fff;
+    font-size: 18px;
+    padding: 0 30px;
+    cursor: pointer;
+}
+
+.upload-form button {
+    padding: 0 40px;
+    height: 100%;
+    background: #ff3929;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.upload-form button:hover {
+    background: #e03b1b; /* Darker shade on hover */
+}
+
+::placeholder {
+    color: #fff;
+    font-size: 18px;
+}
+
+/* Hide Show More Button and Modal for Upload */
+#show-more-btn {
+    display: none;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+}
+
+/* Image Result Styles */
+#search-result {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 1000px; /* Restrict maximum width */
+    margin: 100px auto 50px; /* Center the grid */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-gap: 20px;
+    justify-content: center; /* Center the grid content */
+}
+
+#search-result img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+}
+
+#caption {
+    margin: 10px auto;
+    color: #fff;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #ff3929;
+}
+
+#search-toggle {
+    margin: 20px auto;
+}
+
+#search-toggle button {
+    background: #ff3929;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px; /* Space between buttons */
+    transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#search-toggle button:hover {
+    background: #e03b1b; /* Darker shade on hover */
+}

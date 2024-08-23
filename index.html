@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cai Studio Facial Search Engine</title>
+    <link id="dynamic-css" rel="stylesheet" href="textsearch.css"> <!-- Default CSS -->
+</head>
+<body>
+    <h1>Cai Studio Facial Search Engine</h1>
+    
+    <!-- Toggle Buttons -->
+    <div id="search-toggle">
+        <button id="text-search-btn">Text Search</button>
+        <button id="image-search-btn">Image Search</button>
+    </div>
+    
+    <!-- Search Form -->
+    <form id="search-form" class="search-form">
+        <input type="text" id="search-box" placeholder="Search name here...">
+        <button type="submit">Search</button>
+    </form>
+    
+    <!-- Upload Form -->
+    <form id="upload-form" class="upload-form">
+        <input type="file" id="file-input" accept="image/*">
+        <button type="submit">Upload Photo</button>
+    </form>
+    
+    <!-- Search Results -->
+    <div id="search-result"></div>
+    
+    <!-- Show More Button -->
+    <button id="show-more-btn">Show More</button>
+    
+    <!-- Modal for Larger Image -->
+    <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+    
+    <!-- JavaScript Files -->
+    <script src="textsearch.js"></script>
+    <script src="imagesearch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    
+    <!-- Script to Handle CSS Switching -->
+    <script>
+        document.getElementById('text-search-btn').addEventListener('click', () => {
+            document.getElementById('dynamic-css').setAttribute('href', 'textsearch.css');
+            document.querySelector('.search-form').classList.add('active');
+            document.querySelector('.upload-form').classList.remove('active');
+        });
+
+        document.getElementById('image-search-btn').addEventListener('click', () => {
+            document.getElementById('dynamic-css').setAttribute('href', 'imageupload.css');
+            document.querySelector('.search-form').classList.remove('active');
+            document.querySelector('.upload-form').classList.add('active');
+        });
+    </script>
+</body>
+</html>
